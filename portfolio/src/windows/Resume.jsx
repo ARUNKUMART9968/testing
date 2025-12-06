@@ -1,9 +1,12 @@
 import React from 'react'
+import WindowWrapper from '#hoc/WindowWrapper.jsx'
 
 const Resume = () => {
   return (
-    <div>Resume</div>
+    <>
+    
+    </>
   )
 }
-
-export default Resume
+const ResumeWindow = WindowWrapper(Resume, 'resume');
+export default ResumeWindow
