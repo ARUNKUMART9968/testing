@@ -32,4 +32,3 @@ const useWindowStore = create(
     })),
 );
 export default useWindowStore;
-
