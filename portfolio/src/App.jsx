@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { Draggable } from "gsap/Draggable";
 import { useGSAP } from "@gsap/react"; 
 
-import {Terminal} from "#windows/index.js";
+import {Terminal, Safari,Resume} from "#windows/index.js";
 import { Navbar, Welcome, Dock } from "#components/index.js";
 import "./index.css";
 
@@ -16,6 +16,8 @@ const App = () => {
       <Welcome />
       <Dock />
       <Terminal />
+      <Safari />
+      <Resume />
     </main>
   );
 };
