@@ -24,10 +24,10 @@ const Dock = () => {
         const intensity = Math.exp(-(distance ** 2.5) / 2000);
 
         gsap.to(icon, {
-          scale: 1 + 0.25 + intensity,
-          y: -15 * intensity,
-          duration: 0.2,
-          ease: "power1.out",
+          scale: 1 + 0.2 * intensity,
+          y: -8 * intensity,
+          duration: 0.25,
+          ease: "power2.out",
         });
       });
     };

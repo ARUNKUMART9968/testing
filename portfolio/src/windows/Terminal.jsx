@@ -1,13 +1,14 @@
 import React from 'react'
 import WindowWrapper from '#hoc/WindowWrapper.jsx'
 import { techStack } from '#constants'
-import { Check } from 'lucide-react'
+import { Check, Flag } from 'lucide-react'
+import { WindowControls } from '#components/index'
 
 const Terminal = () => {
   return (
     <>
       <div id="window-header">
-        <p>Window Controls</p>
+        <WindowControls target ="terminal"/>
         <h2>Tech Stack</h2>
       </div>
       <div className="techstack">
@@ -26,12 +27,25 @@ const Terminal = () => {
               <h3>{category}</h3>
               <ul>
                 {items.map((item, i) => (
-                  <li key={i}>{item }{i<items.length -1 ? "," :""}</li>
+                  <li key={i}>
+                    {item}
+                    {i < items.length - 1 ? ',' : ''}
+                  </li>
                 ))}
               </ul>
             </li>
           ))}
         </ul>
+        <div className="footnote">
+          <p>
+            <Check size={20} />
+            5 of 5 stacks loaded successfully (100%)
+          </p>
+          <p className="text-black">
+            <Flag size={15} />
+            Render time: 6ms
+          </p>
+        </div>
       </div>
     </>
   )
